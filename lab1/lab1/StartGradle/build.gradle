@@ -23,8 +23,9 @@ application {
 }
 
 jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
     manifest {
-        attributes('MainClass': 'ro.mpp2025.MainApplication')
+        attributes 'Main-Class': 'ro.mpp2025.MainApplication'
     }
     from {
         configurations.runtimeClasspath.collect {
