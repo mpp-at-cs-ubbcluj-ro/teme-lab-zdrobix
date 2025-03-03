@@ -1,4 +1,4 @@
-package org.example.repo;
+package ro.mpp2025.repository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
