@@ -9,11 +9,21 @@ public class Signup extends Entity<Tuple<Integer, Integer>>{
         this.Event = event;
     }
 
+    public Signup() {
+        this.Child = new Child ("", "");
+        this.Event = new Event("", 0, 0);
+    };
+
     public Child GetChild() {
         return this.Child;
     }
 
     public Event GetEvent() {
         return this.Event;
+    }
+
+    @Override
+    public String toString() {
+        return this.Child.GetName() + " " + this.Event.GetName();
     }
 }

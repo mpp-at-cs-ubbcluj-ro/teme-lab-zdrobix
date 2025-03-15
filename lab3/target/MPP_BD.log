@@ -1,0 +1,65 @@
+15 Mar 2025 14:32:35,512 INFO  org.example.repository.db.ChildDbRepository 20 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:32:35,519 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Andrei Mitica 5101010____
+15 Mar 2025 14:32:35,521 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:32:35,522 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+15 Mar 2025 14:32:35,523 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+15 Mar 2025 14:32:35,523 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+15 Mar 2025 14:32:35,530 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+15 Mar 2025 14:32:36,143 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@23c30a20)
+15 Mar 2025 14:32:36,158 ERROR org.example.repository.db.ChildDbRepository 49 Save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_NOTNULL] A NOT NULL constraint failed (NOT NULL constraint failed: children.id)
+15 Mar 2025 14:32:36,158 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:32:36,159 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Florian Matei 5110409____
+15 Mar 2025 14:32:36,159 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:32:36,159 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@23c30a20)
+15 Mar 2025 14:32:36,161 ERROR org.example.repository.db.ChildDbRepository 49 Save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_NOTNULL] A NOT NULL constraint failed (NOT NULL constraint failed: children.id)
+15 Mar 2025 14:32:36,161 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:32:36,162 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Anghel Razvan 5081111____
+15 Mar 2025 14:32:36,162 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:32:36,163 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@23c30a20)
+15 Mar 2025 14:32:36,165 ERROR org.example.repository.db.ChildDbRepository 49 Save - org.sqlite.SQLiteException: [SQLITE_CONSTRAINT_NOTNULL] A NOT NULL constraint failed (NOT NULL constraint failed: children.id)
+15 Mar 2025 14:32:36,166 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:34:48,911 INFO  org.example.repository.db.ChildDbRepository 20 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:34:48,916 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Andrei Mitica 5101010____
+15 Mar 2025 14:34:48,918 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:34:48,919 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+15 Mar 2025 14:34:48,919 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+15 Mar 2025 14:34:48,920 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+15 Mar 2025 14:34:48,920 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+15 Mar 2025 14:34:49,307 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e1a0406)
+15 Mar 2025 14:34:49,350 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:34:49,351 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Florian Matei 5110409____
+15 Mar 2025 14:34:49,352 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:34:49,353 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e1a0406)
+15 Mar 2025 14:34:49,370 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:34:49,371 TRACE org.example.repository.db.ChildDbRepository 41 Save - Enter Saving child Anghel Razvan 5081111____
+15 Mar 2025 14:34:49,371 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:34:49,372 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1e1a0406)
+15 Mar 2025 14:34:49,389 TRACE org.example.repository.db.ChildDbRepository 52 Save - Exit
+15 Mar 2025 14:39:03,465 INFO  org.example.repository.db.ChildDbRepository 20 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:51:33,024 INFO  org.example.repository.db.ChildDbRepository 22 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:51:33,029 TRACE org.example.repository.db.ChildDbRepository 38 FindAll - Enter Getting all of the children.
+15 Mar 2025 14:51:33,030 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:51:33,031 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+15 Mar 2025 14:51:33,031 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+15 Mar 2025 14:51:33,032 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+15 Mar 2025 14:51:33,032 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+15 Mar 2025 14:51:33,407 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@121314f7)
+15 Mar 2025 14:51:33,424 TRACE org.example.repository.db.ChildDbRepository 56 FindAll - Exit
+15 Mar 2025 14:52:02,736 INFO  org.example.repository.db.ChildDbRepository 22 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:52:02,745 TRACE org.example.repository.db.ChildDbRepository 38 FindAll - Enter Getting all of the children.
+15 Mar 2025 14:52:02,746 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:52:02,746 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+15 Mar 2025 14:52:02,747 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+15 Mar 2025 14:52:02,747 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+15 Mar 2025 14:52:02,747 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+15 Mar 2025 14:52:03,120 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@121314f7)
+15 Mar 2025 14:52:03,141 TRACE org.example.repository.db.ChildDbRepository 56 FindAll - Exit
+15 Mar 2025 14:55:00,870 INFO  org.example.repository.db.ChildDbRepository 22 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+15 Mar 2025 14:55:00,878 TRACE org.example.repository.db.ChildDbRepository 38 FindAll - Enter Getting all of the children.
+15 Mar 2025 14:55:00,878 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+15 Mar 2025 14:55:00,879 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+15 Mar 2025 14:55:00,879 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+15 Mar 2025 14:55:00,880 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+15 Mar 2025 14:55:00,880 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+15 Mar 2025 14:55:01,423 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@121314f7)
+15 Mar 2025 14:55:01,443 TRACE org.example.repository.db.ChildDbRepository 56 FindAll - Exit

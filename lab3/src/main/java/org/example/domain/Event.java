@@ -22,4 +22,9 @@ public class Event extends Entity<Integer>{
     public int GetMaxAge() {
         return this.MaxAge;
     }
+
+    @Override
+    public String toString() {
+        return this.Name + ' ' + this.MinAge + ' ' + this.MaxAge;
+    }
 }

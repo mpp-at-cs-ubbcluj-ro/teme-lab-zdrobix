@@ -16,4 +16,9 @@ public class Child extends Entity<Integer>{
     public String GetCNP() {
         return this.CNP;
     }
+
+    @Override
+    public String toString() {
+        return this.Name + ' ' + this.CNP;
+    }
 }
