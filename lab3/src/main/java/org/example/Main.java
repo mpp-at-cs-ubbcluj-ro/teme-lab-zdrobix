@@ -1,7 +1,11 @@
 package org.example;
 
+import org.example.domain.Event;
+import org.example.domain.Signup;
 import org.example.repository.db.ChildDbRepository;
 import org.example.domain.Child;
+import org.example.repository.db.EventDbRepository;
+import org.example.repository.db.SignupDbRepository;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -19,11 +23,15 @@ public class Main {
         }
 
         var ChildDbRepo = new ChildDbRepository(properties);
-
-        //ChildDbRepo.Save(new Child("Andrei Mitica", "5101010____"));
-        //ChildDbRepo.Save(new Child("Florian Matei", "5110409____"));
-        //ChildDbRepo.Save(new Child("Anghel Razvan", "5081111____"));
         for (var ch : ChildDbRepo.FindAll())
             System.out.println(ch);
+
+        var EventDbRepo = new EventDbRepository(properties);
+        for (var ev : EventDbRepo.FindAll())
+            System.out.println(ev);
+
+        var SignupDbRepo = new SignupDbRepository(properties);
+        for (var sg : SignupDbRepo.FindAll())
+            System.out.println(sg);
     }
 }

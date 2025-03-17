@@ -19,7 +19,7 @@ public class SignupDbRepository implements ISignupRepository {
     private static final Logger logger = LogManager.getLogger();
 
     public SignupDbRepository(Properties properties) {
-        logger.info("Initializing ChildDbRepository with properties: {}", properties);
+        logger.info("Initializing SignupDbRepository with properties: {}", properties);
         this.Utils = new CommonUtils(properties);
     }
     @Override
