@@ -19,6 +19,11 @@ dependencies {
 
     runtimeOnly group: 'org.xerial', name: 'sqlite-jdbc', version :'3.45.1.0'
     implementation 'org.slf4j:slf4j-simple:2.0.12'
+
+    implementation 'org.openjfx:javafx-base:21.0.1:win'
+    implementation 'org.openjfx:javafx-controls:21.0.1:win'
+    implementation 'org.openjfx:javafx-fxml:21.0.1:win'
+    implementation 'org.openjfx:javafx-graphics:21.0.1:win'
 }
 
 java {
@@ -33,4 +38,11 @@ test {
 
 application {
     mainClassName = 'org.example.Main'
+}
+
+run {
+    jvmArgs = [
+            '--module-path', configurations.runtimeClasspath.asPath,
+            '--add-modules', 'javafx.controls,javafx.fxml'
+    ]
 }
