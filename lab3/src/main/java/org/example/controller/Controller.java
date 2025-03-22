@@ -7,11 +7,11 @@ import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
 import org.example.domain.Child;
 import org.example.domain.Event;
 import org.example.domain.Signup;
@@ -22,6 +22,7 @@ import org.example.service.ServiceLogin;
 
 import java.util.Collection;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class Controller {
     private static Controller Instance;
@@ -68,6 +69,7 @@ public class Controller {
 
         Stage loginStage = new Stage();
         Scene MainScene = new Scene(stackPane, 800, 600);
+        MainScene.getStylesheets().add(Controller.class.getResource("/css/styles.css").toExternalForm());
         loginStage.setTitle("Login Page");
         loginStage.setScene(MainScene);
         loginStage.show();
@@ -118,6 +120,7 @@ public class Controller {
 
         Stage menuStage = new Stage();
         Scene menuScene = new Scene(stackPane, 800, 600);
+        menuScene.getStylesheets().add(Controller.class.getResource("/css/styles.css").toExternalForm());
         menuStage.setTitle("Menu Page");
         menuStage.setScene(menuScene);
         menuStage.show();
@@ -178,6 +181,40 @@ public class Controller {
         childTable.getColumns().addAll(childIdColumn, childNameColumn, childCnpColumn);
         childTable.setItems(modelChild);
 
+        HBox searchName = new HBox(10);
+
+        TextField searchNameField = new TextField();
+        searchNameField.setPromptText("Name");
+        searchNameField.setMaxWidth(100);
+
+        Button searchButton = new Button("Search");
+        searchButton.setPrefWidth(90);
+        searchButton.setOnAction(e -> {
+            if (searchNameField.getText().isEmpty()) {
+                modelChild.setAll((Collection<Child>)ServiceChild.GetAll());
+                return;
+            }
+            var searchResult = ((Collection<Child>) ServiceChild.GetAll())
+                    .stream()
+                    .filter(
+                            x ->
+                                    x.GetName()
+                                            .toLowerCase()
+                                            .contains(
+                                                    searchNameField
+                                                            .getText()
+                                                            .toLowerCase()
+                                                            .strip()
+                                            )
+                    )
+                    .collect(Collectors.toList());
+            modelChild.setAll(
+                    searchResult
+            );
+        });
+
+        searchName.getChildren().addAll(searchNameField, searchButton);
+
         TextField nameField = new TextField();
         nameField.setPromptText("Name");
         nameField.setMaxWidth(200);
@@ -205,7 +242,6 @@ public class Controller {
             ServiceChild.AddChild(nameField.getText(), cnpField.getText());
             nameField.clear();
             cnpField.clear();
-            showAlert("Child added succesfully.", Alert.AlertType.INFORMATION);
         });
 
         Button updateChild = new Button("Update");
@@ -224,10 +260,9 @@ public class Controller {
             nameField.clear();
             cnpField.clear();
             //modelChild.set(modelChild.indexOf(oldChild), newChild);
-            showAlert("Child updated succesfully.", Alert.AlertType.INFORMATION);
         });
 
-        vbox.getChildren().addAll(childTable, nameField, cnpField, addChildButton, updateChild);
+        vbox.getChildren().addAll(searchName, childTable, nameField, cnpField, addChildButton, updateChild);
 
         return vbox;
     }
@@ -264,6 +299,40 @@ public class Controller {
 
         eventTable.getColumns().addAll(eventIdColumn, eventNameColumn, eventAgeColumn);
         eventTable.setItems(modelEvent);
+
+        HBox searchName = new HBox(10);
+
+        TextField searchNameField = new TextField();
+        searchNameField.setPromptText("Name");
+        searchNameField.setMaxWidth(100);
+
+        Button searchButton = new Button("Search");
+        searchButton.setPrefWidth(90);
+        searchButton.setOnAction(e -> {
+            if (searchNameField.getText().isEmpty()) {
+                modelEvent.setAll((Collection<Event>) ServiceEvent.GetAll());
+                return;
+            }
+            var searchResult = ((Collection<Event>) ServiceEvent.GetAll())
+                    .stream()
+                    .filter(
+                            x ->
+                                    x.GetName()
+                                            .toLowerCase()
+                                            .contains(
+                                                    searchNameField
+                                                            .getText()
+                                                            .toLowerCase()
+                                                            .strip()
+                                            )
+                    )
+                    .collect(Collectors.toList());
+            modelEvent.setAll(
+                    searchResult
+            );
+        });
+
+        searchName.getChildren().addAll(searchNameField, searchButton);
 
         TextField nameField = new TextField();
         nameField.setPromptText("Name");
@@ -308,7 +377,6 @@ public class Controller {
             nameField.clear();
             minAgeField.clear();
             maxAgeField.clear();
-            showAlert("Event added succesfully.", Alert.AlertType.INFORMATION);
         });
 
         Button updateEventButton = new Button("Update");
@@ -331,14 +399,13 @@ public class Controller {
                 return;
             }
             Event oldEvent = ServiceEvent.GetById(SelectedEventId);
-            Event newEvent = ServiceEvent.UpdateEvent((Event)new Event(nameField.getText(), minAge, maxAge).SetId(SelectedEventId));
+            Event newEvent = ServiceEvent.UpdateEvent((Event) new Event(nameField.getText(), minAge, maxAge).SetId(SelectedEventId));
             nameField.clear();
             minAgeField.clear();
             maxAgeField.clear();
-            showAlert("Event updated succesfully.", Alert.AlertType.INFORMATION);
         });
 
-        vbox.getChildren().addAll(eventTable, nameField, ageHBox, addEventButton, updateEventButton);
+        vbox.getChildren().addAll(searchName, eventTable, nameField, ageHBox, addEventButton, updateEventButton);
 
         return vbox;
     }
@@ -347,8 +414,12 @@ public class Controller {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
+        var signups = (Collection<? extends Signup>) ServiceSignup.GetAllMapped(ServiceChild, ServiceEvent);
+
         modelSignup = FXCollections.observableArrayList();
-        modelSignup.setAll((Collection<? extends Signup>) ServiceSignup.GetAll());
+        modelSignup.setAll(
+                signups
+        );
 
         TableView<Signup> signupTable = new TableView<>();
         TableColumn<Signup, String> childColumn = new TableColumn<>("Child");
@@ -369,6 +440,66 @@ public class Controller {
         signupTable.getColumns().addAll(childColumn, eventColumn);
         signupTable.setItems(modelSignup);
 
+        HBox searchName = new HBox(10);
+
+        TextField searchIdField = new TextField();
+        searchIdField.setPromptText("Id");
+        searchIdField.setMaxWidth(40);
+
+        Button searchChildIdButton = new Button("Child");
+        searchChildIdButton.setPrefWidth(70);
+        searchChildIdButton.setOnAction(e -> {
+            if (searchIdField.getText().isEmpty()) {
+                modelSignup.setAll();
+                return;
+            }
+            int id;
+            try {
+                id = Integer.parseInt(searchIdField.getText());
+            } catch (NumberFormatException ex) {
+                showAlert("Invalid id format.", Alert.AlertType.ERROR);
+                return;
+            }
+            var searchResult = signups
+                    .stream()
+                    .filter(
+                            x ->
+                                    x.GetChild().GetId() == id
+                    )
+                    .collect(Collectors.toList());
+            modelSignup.setAll(
+                    searchResult
+            );
+        });
+
+        Button searchEventIdButton = new Button("Event");
+        searchEventIdButton.setPrefWidth(70);
+        searchEventIdButton.setOnAction(e -> {
+            if (searchIdField.getText().isEmpty()) {
+                modelSignup.setAll(signups);
+                return;
+            }
+            int id;
+            try {
+                id = Integer.parseInt(searchIdField.getText());
+            } catch (NumberFormatException ex) {
+                showAlert("Invalid id format.", Alert.AlertType.ERROR);
+                return;
+            }
+            var searchResult = signups
+                    .stream()
+                    .filter(
+                            x ->
+                                    x.GetEvent().GetId() == id
+                    )
+                    .collect(Collectors.toList());
+            modelSignup.setAll(
+                    searchResult
+            );
+        });
+
+        searchName.getChildren().addAll(searchIdField, searchChildIdButton, searchEventIdButton);
+
         childField.setEditable(false);
         childField.setMaxWidth(200);
 
@@ -388,7 +519,6 @@ public class Controller {
             );
             childField.clear();
             eventField.clear();
-            showAlert("Signup added succesfully.", Alert.AlertType.INFORMATION);
         });
 
         Button deleteSignupButton = new Button("Delete");
@@ -398,12 +528,10 @@ public class Controller {
                 showAlert("Invalid child or event.", Alert.AlertType.ERROR);
                 return;
             }
-            var deleted = ServiceSignup.Delete(SelectedChildId, SelectedEventId);
-            modelSignup.remove(deleted);
-            showAlert("Signup deleted succesfully.", Alert.AlertType.INFORMATION);
+            Signup deleted = ServiceSignup.Delete(SelectedChildId, SelectedEventId);
         });
 
-        vbox.getChildren().addAll(signupTable, childField, eventField, addSignupButton, deleteSignupButton);
+        vbox.getChildren().addAll(searchName, signupTable, childField, eventField, addSignupButton, deleteSignupButton);
 
         return vbox;
     }

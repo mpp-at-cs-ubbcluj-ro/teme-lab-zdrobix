@@ -6,6 +6,8 @@ import org.example.domain.Signup;
 import org.example.domain.Tuple;
 import org.example.repository.db.SignupDbRepository;
 
+import java.util.ArrayList;
+
 public class ServiceSignup {
     private SignupDbRepository Repo;
 
@@ -35,5 +37,20 @@ public class ServiceSignup {
 
     public Signup Delete (int childId, int eventId) {
         return this.Repo.Delete(new Tuple(childId, eventId));
+    }
+
+    public Iterable<Signup> GetAllMapped(ServiceChild serviceChild, ServiceEvent serviceEvent) {
+        var result = new ArrayList<Signup>();
+        for (var signupNull : this.Repo.FindAll()) {
+            result.add(
+                    (Signup) new Signup(
+                            serviceChild.GetById(signupNull.GetId().GetFirst()),
+                            serviceEvent.GetById(signupNull.GetId().GetSecond())
+                    ).SetId(
+                            signupNull.GetId()
+                    )
+            );
+        }
+        return result;
     }
 }

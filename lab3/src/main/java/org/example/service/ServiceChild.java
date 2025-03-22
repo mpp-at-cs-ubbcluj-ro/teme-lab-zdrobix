@@ -25,4 +25,8 @@ public class ServiceChild {
     public Child UpdateChild (Child child) {
         return this.Repo.Update(child);
     }
+
+    public Iterable<Child> GetByAge (int age) {
+        return this.Repo.GetAllByAge(age);
+    }
 }
