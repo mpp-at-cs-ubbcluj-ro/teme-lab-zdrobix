@@ -23,7 +23,7 @@ import org.example.service.ServiceSignup;
 
 public class Main extends Application{
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("/org/example/views/main_view.fxml"));
 
         Properties properties = new Properties(System.getProperties());

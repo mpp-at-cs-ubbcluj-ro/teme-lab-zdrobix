@@ -2,11 +2,12 @@ package org.example.service;
 
 import org.example.domain.Child;
 import org.example.repository.db.ChildDbRepository;
+import org.example.repository.interf.IChildRepository;
 
 public class ServiceChild {
-    private ChildDbRepository Repo;
+    private IChildRepository Repo;
 
-    public ServiceChild(ChildDbRepository repo) {
+    public ServiceChild(IChildRepository repo) {
         this.Repo = repo;
     }
 

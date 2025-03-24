@@ -5,13 +5,14 @@ import org.example.domain.Event;
 import org.example.domain.Signup;
 import org.example.domain.Tuple;
 import org.example.repository.db.SignupDbRepository;
+import org.example.repository.interf.ISignupRepository;
 
 import java.util.ArrayList;
 
 public class ServiceSignup {
-    private SignupDbRepository Repo;
+    private ISignupRepository Repo;
 
-    public ServiceSignup(SignupDbRepository repo) {
+    public ServiceSignup(ISignupRepository repo) {
         this.Repo = repo;
     }
 

@@ -1,12 +1,12 @@
 package org.example.service;
 
 import org.example.domain.Event;
-import org.example.repository.db.EventDbRepository;
+import org.example.repository.interf.IEventRepository;
 
 public class ServiceEvent {
-    private EventDbRepository Repo;
+    private IEventRepository Repo;
 
-    public ServiceEvent(EventDbRepository repo) {
+    public ServiceEvent(IEventRepository repo) {
         this.Repo = repo;
     }
 

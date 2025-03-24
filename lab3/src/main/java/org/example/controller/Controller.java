@@ -12,6 +12,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
+import org.example.utils.Crypter;
 import org.example.domain.Child;
 import org.example.domain.Event;
 import org.example.domain.Signup;
@@ -20,8 +21,9 @@ import org.example.service.ServiceEvent;
 import org.example.service.ServiceSignup;
 import org.example.service.ServiceLogin;
 
+import java.io.File;
 import java.util.Collection;
-import java.util.Objects;
+import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Controller {
@@ -100,7 +102,23 @@ public class Controller {
                 showAlert("Invalid username.", Alert.AlertType.ERROR);
                 return;
             }
-            if (Objects.equals(loginInfo.GetPassword(), password)) {
+            String encrypted;
+            try {
+                encrypted = Crypter.encrypt(
+                        password,
+                        new Scanner(
+                                new File(
+                                        "./key.txt"
+                                )
+                        )
+                                .nextLine());
+            } catch (Exception ex) {
+                showAlert("Invalid file password.", Alert.AlertType.ERROR);
+                return;
+            }
+            System.out.println(encrypted);
+            System.out.println(loginInfo.GetPassword());
+            if (password.equals(loginInfo.GetPassword())) {
                 showMenuPage();
                 Stage stage = (Stage) buttonLogin.getScene().getWindow();
                 stage.close();
@@ -145,7 +163,11 @@ public class Controller {
         var logout = new Button("Logout");
         logout.setPrefWidth(200);
         logout.setOnAction(e -> {
-            StartApp();
+            try {
+                StartApp();
+            } catch (Exception ex) {
+                throw new RuntimeException(ex);
+            }
             Stage stage = (Stage) vbox.getScene().getWindow();
             stage.close();
         });
