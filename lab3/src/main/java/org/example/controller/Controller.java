@@ -79,6 +79,8 @@ public class Controller {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
+        Label label = new Label("Children events");
+
         TextField usernameField = new TextField();
         usernameField.setPromptText("Username");
         usernameField.setMaxWidth(200);
@@ -107,7 +109,7 @@ public class Controller {
             }
         });
 
-        vbox.getChildren().addAll(usernameField, passwordField, buttonLogin);
+        vbox.getChildren().addAll(label, usernameField, passwordField, buttonLogin);
         return vbox;
     }
 
@@ -140,11 +142,18 @@ public class Controller {
             Stage stage = (Stage) vbox.getScene().getWindow();
             stage.close();
         });
+        var logout = new Button("Logout");
+        logout.setPrefWidth(200);
+        logout.setOnAction(e -> {
+            StartApp();
+            Stage stage = (Stage) vbox.getScene().getWindow();
+            stage.close();
+        });
 
         HBox hbox = new HBox(10);
         hbox.setAlignment(Pos.CENTER);
         hbox.getChildren().addAll(childMenu,eventMenu, signupMenu);
-        vbox.getChildren().addAll(hbox, refresh);
+        vbox.getChildren().addAll(hbox, refresh, logout);
 
         return vbox;
     }
@@ -450,7 +459,7 @@ public class Controller {
         searchChildIdButton.setPrefWidth(70);
         searchChildIdButton.setOnAction(e -> {
             if (searchIdField.getText().isEmpty()) {
-                modelSignup.setAll();
+                modelSignup.setAll(signups);
                 return;
             }
             int id;

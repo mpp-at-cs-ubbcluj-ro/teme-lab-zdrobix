@@ -66,18 +66,9 @@
     -fx-padding: 20px;
 }
 
-#friendLabel {
-    -fx-font-size: 14px;
-    -fx-font-style: italic;
-    -fx-text-fill: #777777;
-}
 
 .vbox, .hbox {
     -fx-alignment: center-left;
-}
-
-#currentUserLabel {
-    -fx-text-fill: #807d80;
 }
 
 .text-field, .password-field {
