@@ -39,10 +39,10 @@ public class MainFXSpring extends Application {
 
     static ComputerRepairServices getService() throws ServicesException {
             // pentru configurare folosind XML
-           ApplicationContext context=new ClassPathXmlApplicationContext("RepairShopConfig.xml");
+           //ApplicationContext context=new ClassPathXmlApplicationContext("RepairShopConfig.xml");
 
             //pentru configurare folosind JavaConfig
-           // ApplicationContext context=new AnnotationConfigApplicationContext(RepairShopConfig.class);
+            ApplicationContext context=new AnnotationConfigApplicationContext(RepairShopConfig.class);
             ComputerRepairServices services=context.getBean(ComputerRepairServices.class);
             return services;
 

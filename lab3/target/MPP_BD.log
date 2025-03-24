@@ -19004,3 +19004,983 @@
 24 Mar 2025 16:13:48,121 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
 24 Mar 2025 16:13:48,433 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ca9df37)
 24 Mar 2025 16:13:48,444 TRACE org.example.repository.db.LoginDbRepository 68 GetByUsername - Exit
+24 Mar 2025 16:20:15,287 INFO  org.example.repository.db.ChildDbRepository 24 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:20:15,292 INFO  org.example.repository.db.EventDbRepository 21 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:20:15,293 INFO  org.example.repository.db.SignupDbRepository 22 <init> - Initializing SignupDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:20:15,295 INFO  org.example.repository.db.LoginDbRepository 21 <init> - Initializing LoginDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:20:19,261 TRACE org.example.repository.db.LoginDbRepository 52 GetByUsername - Enter Getting login info for username alex
+24 Mar 2025 16:20:19,262 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,262 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:20:19,262 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:20:19,262 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:20:19,263 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:20:19,504 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ca9df37)
+24 Mar 2025 16:20:19,511 TRACE org.example.repository.db.LoginDbRepository 68 GetByUsername - Exit
+24 Mar 2025 16:20:19,548 TRACE org.example.repository.db.ChildDbRepository 81 FindAll - Enter Getting all of the children.
+24 Mar 2025 16:20:19,549 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,549 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:20:19,550 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:20:19,550 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:20:19,550 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:20:19,551 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,554 TRACE org.example.repository.db.ChildDbRepository 99 FindAll - Exit
+24 Mar 2025 16:20:19,585 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+24 Mar 2025 16:20:19,585 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,586 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:20:19,586 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:20:19,586 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:20:19,587 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:20:19,588 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,590 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+24 Mar 2025 16:20:19,596 TRACE org.example.repository.db.SignupDbRepository 96 FindAll - Enter Getting all of the signups.
+24 Mar 2025 16:20:19,596 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,596 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:20:19,597 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:20:19,597 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:20:19,597 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:20:19,598 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@7b9a65c3)
+24 Mar 2025 16:20:19,600 TRACE org.example.repository.db.SignupDbRepository 111 FindAll - Exit
+24 Mar 2025 16:20:19,600 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:20:19,601 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,601 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,601 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,601 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:20:19,602 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,602 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,603 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,603 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,603 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,603 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,604 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,604 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,604 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,605 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,605 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,606 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,607 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,607 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,607 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,608 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,608 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,608 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,608 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,608 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,609 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,609 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,609 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,609 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,610 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,610 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,610 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,610 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,611 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,611 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,611 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,611 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,612 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,612 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,613 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,613 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:20:19,613 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,613 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,614 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,614 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:20:19,614 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,615 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,615 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,615 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:20:19,615 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,616 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,616 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,616 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:20:19,617 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,617 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,617 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,617 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:20:19,617 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,618 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,618 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,618 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:20:19,619 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,619 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,619 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,619 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:19,620 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,620 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,620 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,620 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:20:19,620 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,620 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,621 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,621 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:19,621 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,621 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,621 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,622 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:20:19,622 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,622 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,622 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,622 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:20:19,622 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,623 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,623 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,623 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:20:19,623 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,624 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,624 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,624 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:20:19,624 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,625 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,625 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,626 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:20:19,626 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,626 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,626 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,792 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:20:19,793 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,793 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,793 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,793 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:20:19,794 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,794 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,794 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,800 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,800 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,800 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,801 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,801 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,801 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,802 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,802 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,803 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,803 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,804 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,804 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,805 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,805 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,805 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,807 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,953 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,953 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,953 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,953 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,954 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,954 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,954 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,954 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,956 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,956 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,956 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,957 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,957 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,957 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,957 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,957 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,958 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,958 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,958 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,959 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,959 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,959 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,959 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,960 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,960 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,961 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,961 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,961 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,962 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,962 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,962 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,962 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,964 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:20:19,964 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,964 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,965 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,966 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:20:19,966 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,966 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,967 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,969 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,970 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,970 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,970 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,970 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,970 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,971 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,971 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,973 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:20:19,973 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,974 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,974 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,974 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,974 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,975 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,975 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,978 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,978 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,978 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,979 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,979 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:20:19,979 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,979 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,979 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,983 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:20:19,983 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,983 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,984 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,984 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:20:19,984 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,984 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,985 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,987 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:20:19,988 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,988 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,988 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,989 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:20:19,989 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,989 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,989 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,992 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:20:19,992 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,992 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,992 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,993 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:20:19,993 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,993 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,993 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:19,996 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:20:19,996 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,996 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:19,997 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:19,997 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:20:19,997 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:19,997 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:19,998 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:20,055 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:20,056 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,056 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:20,060 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:20,061 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:20:20,062 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,062 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:20,063 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:20,064 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:20,065 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,065 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:20,066 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:20,066 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:20:20,067 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,067 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:20,068 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:20,068 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:20,069 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,069 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:20,071 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:20,071 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:20:20,071 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,072 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:20,073 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:20:20,078 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:20:20,079 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,079 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@463c6a44)
+24 Mar 2025 16:20:20,080 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:20:20,080 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:20:20,080 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:20:20,081 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@66dcb88d)
+24 Mar 2025 16:20:20,081 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:09,811 INFO  org.example.repository.db.ChildDbRepository 24 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:09,815 INFO  org.example.repository.db.EventDbRepository 21 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:09,817 INFO  org.example.repository.db.SignupDbRepository 22 <init> - Initializing SignupDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:09,818 INFO  org.example.repository.db.LoginDbRepository 21 <init> - Initializing LoginDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:14,106 TRACE org.example.repository.db.LoginDbRepository 52 GetByUsername - Enter Getting login info for username alex
+24 Mar 2025 16:22:14,106 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:14,107 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:22:14,107 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:22:14,107 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:22:14,108 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:22:14,392 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@4ca9df37)
+24 Mar 2025 16:22:14,403 TRACE org.example.repository.db.LoginDbRepository 68 GetByUsername - Exit
+24 Mar 2025 16:22:39,802 INFO  org.example.repository.db.ChildDbRepository 24 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:39,806 INFO  org.example.repository.db.EventDbRepository 21 <init> - Initializing ChildDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:39,808 INFO  org.example.repository.db.SignupDbRepository 22 <init> - Initializing SignupDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:39,809 INFO  org.example.repository.db.LoginDbRepository 21 <init> - Initializing LoginDbRepository with properties: {user.timezone=Europe/Bucharest, jdbc.url=jdbc:sqlite:children_events.db}
+24 Mar 2025 16:22:44,482 TRACE org.example.repository.db.LoginDbRepository 52 GetByUsername - Enter Getting login info for username alex
+24 Mar 2025 16:22:44,483 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,483 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:22:44,483 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:22:44,485 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:22:44,485 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:22:44,750 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@3c302ab)
+24 Mar 2025 16:22:44,758 TRACE org.example.repository.db.LoginDbRepository 68 GetByUsername - Exit
+24 Mar 2025 16:22:44,792 TRACE org.example.repository.db.ChildDbRepository 81 FindAll - Enter Getting all of the children.
+24 Mar 2025 16:22:44,792 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,793 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:22:44,793 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:22:44,794 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:22:44,794 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:22:44,795 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,797 TRACE org.example.repository.db.ChildDbRepository 99 FindAll - Exit
+24 Mar 2025 16:22:44,838 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+24 Mar 2025 16:22:44,838 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,838 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:22:44,839 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:22:44,839 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:22:44,840 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:22:44,842 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,843 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+24 Mar 2025 16:22:44,847 TRACE org.example.repository.db.SignupDbRepository 96 FindAll - Enter Getting all of the signups.
+24 Mar 2025 16:22:44,848 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,848 TRACE org.example.utils.CommonUtils 25 GetNewConnection - Enter
+24 Mar 2025 16:22:44,848 INFO  org.example.utils.CommonUtils 29 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+24 Mar 2025 16:22:44,848 INFO  org.example.utils.CommonUtils 30 GetNewConnection - user: null
+24 Mar 2025 16:22:44,849 INFO  org.example.utils.CommonUtils 31 GetNewConnection - pass: null
+24 Mar 2025 16:22:44,850 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@76438c0)
+24 Mar 2025 16:22:44,851 TRACE org.example.repository.db.SignupDbRepository 111 FindAll - Exit
+24 Mar 2025 16:22:44,851 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:44,852 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,852 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,853 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,853 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:44,853 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,854 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,854 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,854 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:44,855 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,855 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,856 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,857 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:44,857 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,857 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,858 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,858 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:44,858 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,858 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,859 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,859 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:44,859 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,860 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,860 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,860 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:44,861 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,861 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,861 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,862 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:44,862 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,862 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,862 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,863 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:44,863 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,863 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,864 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,864 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:44,864 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,864 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,865 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,865 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:44,865 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,866 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,866 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,867 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:22:44,867 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,867 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,868 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,868 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:22:44,868 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,869 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,869 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,869 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:44,870 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,870 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,871 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,871 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:44,871 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,871 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,872 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,873 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:44,874 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,874 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,875 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,875 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:44,875 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,876 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,876 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,877 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:44,877 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,877 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,878 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,878 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:44,878 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,879 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,879 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,880 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:44,880 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,880 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,881 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,881 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:44,882 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,882 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,883 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,883 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:44,883 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,884 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,884 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:44,885 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:44,885 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,885 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:44,886 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:44,887 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:44,887 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:44,887 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:44,888 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,083 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:45,083 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,084 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,084 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,085 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:45,085 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,085 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,086 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,095 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,096 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,096 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,097 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,098 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:45,098 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,098 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,099 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,101 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,101 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,101 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,102 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,102 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:45,103 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,103 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,104 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,234 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,234 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,235 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,235 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,236 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,236 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,236 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,236 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,237 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,238 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,238 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,239 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,239 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,239 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,240 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,240 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,241 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:45,241 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,241 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,242 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,242 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,242 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,242 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,243 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,244 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:45,244 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,244 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,245 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,245 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,245 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,245 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,246 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,247 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:45,248 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,248 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,249 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,249 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:45,249 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,249 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,250 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,254 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,255 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,255 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,256 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,256 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:45,256 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,257 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,257 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,262 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:45,262 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,262 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,263 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,263 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,264 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,264 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,265 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,269 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:45,269 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,270 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,270 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,270 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:45,271 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,271 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,271 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,275 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:45,275 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,275 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,275 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,276 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:45,276 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,276 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,276 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,280 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:45,280 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,280 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,281 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,281 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:22:45,281 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,281 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,282 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,285 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:22:45,285 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,285 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,286 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,286 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:45,286 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,286 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,287 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,290 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:45,290 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,290 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,290 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,291 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:45,291 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,291 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,291 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,338 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:45,339 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,339 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,340 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,340 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:45,340 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,341 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,341 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,342 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:45,343 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,343 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,343 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,343 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:45,344 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,344 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,344 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,345 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:45,346 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,347 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,349 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,350 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:45,350 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,350 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,351 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:45,352 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:45,352 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,353 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:45,353 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:45,354 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:45,354 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:45,354 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:45,355 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:48,171 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:48,171 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,172 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:48,172 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:48,173 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:48,173 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,173 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:48,173 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:48,174 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:48,174 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,174 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:48,175 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:48,175 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:48,176 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,176 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:48,176 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:48,177 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:48,177 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,177 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:48,177 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:48,178 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:48,178 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,178 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:48,178 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:48,179 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:48,179 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,179 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:48,180 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:48,180 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:48,180 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:48,180 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:48,180 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:53,829 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:53,829 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:53,829 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:53,830 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:53,831 TRACE org.example.repository.db.ChildDbRepository 121 Update - Enter Updating child Florian Mateiiii 5110409__
+24 Mar 2025 16:22:53,831 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:53,831 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:53,831 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:53,831 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:53,832 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:53,832 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:53,850 TRACE org.example.repository.db.ChildDbRepository 134 Update - Exit
+24 Mar 2025 16:22:54,887 TRACE org.example.repository.db.ChildDbRepository 81 FindAll - Enter Getting all of the children.
+24 Mar 2025 16:22:54,888 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,888 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,888 TRACE org.example.repository.db.ChildDbRepository 99 FindAll - Exit
+24 Mar 2025 16:22:54,889 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+24 Mar 2025 16:22:54,890 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,890 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,891 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+24 Mar 2025 16:22:54,892 TRACE org.example.repository.db.SignupDbRepository 96 FindAll - Enter Getting all of the signups.
+24 Mar 2025 16:22:54,892 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,892 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@76438c0)
+24 Mar 2025 16:22:54,893 TRACE org.example.repository.db.SignupDbRepository 111 FindAll - Exit
+24 Mar 2025 16:22:54,893 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:54,893 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,893 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,894 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,894 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:54,894 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,894 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,895 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,895 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:54,895 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,895 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,895 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,896 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:54,896 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,896 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,896 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,896 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:54,896 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,897 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,897 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,897 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:54,897 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,897 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,898 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,898 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:54,898 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,898 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,899 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,899 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:54,899 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,899 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,900 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,900 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:54,900 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,900 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,900 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,901 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:54,901 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,901 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,901 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,901 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:54,902 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,902 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,903 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,903 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:22:54,904 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,904 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,905 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,905 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:22:54,906 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,906 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,906 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,907 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:54,907 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,908 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,908 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,909 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:54,909 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,909 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,910 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,910 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:54,910 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,910 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,911 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,911 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:54,912 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,912 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,912 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,913 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:54,913 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,913 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,914 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,914 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:54,914 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,914 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,915 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,915 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:54,915 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,916 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,916 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,916 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:54,916 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,917 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,917 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,917 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:54,917 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,918 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,918 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:54,919 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:54,919 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,919 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:54,920 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:54,920 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:54,920 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:54,921 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:54,921 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,010 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:55,010 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,010 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,011 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,011 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:55,012 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,012 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,013 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,017 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,017 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,017 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,018 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,018 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:55,018 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,018 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,019 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,019 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,019 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,019 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,020 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,031 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:55,032 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,032 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,032 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,081 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,081 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,081 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,082 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,082 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,082 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,082 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,082 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,082 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,082 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,084 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,084 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,084 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,084 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,084 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,085 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,085 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:55,085 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,085 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,086 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,086 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,086 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,086 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,086 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,086 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:55,086 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,086 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,088 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,088 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,088 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,088 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,088 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,089 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:55,089 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,090 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,090 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,090 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 1
+24 Mar 2025 16:22:55,090 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,090 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,090 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,094 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,095 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,095 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,095 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,095 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:55,095 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,095 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,095 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,098 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 4
+24 Mar 2025 16:22:55,098 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,098 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,100 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,100 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,100 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,100 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,101 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,103 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:55,103 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,103 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,103 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,103 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 5
+24 Mar 2025 16:22:55,104 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,104 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,104 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,106 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 6
+24 Mar 2025 16:22:55,106 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,106 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,107 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,108 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 4
+24 Mar 2025 16:22:55,108 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,108 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,108 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,110 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:55,110 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,110 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,112 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,112 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 2
+24 Mar 2025 16:22:55,112 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,112 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,113 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,115 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 7
+24 Mar 2025 16:22:55,115 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,115 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,115 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,115 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:55,115 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,115 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,116 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,118 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 1
+24 Mar 2025 16:22:55,118 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,118 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,118 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,119 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:55,119 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,119 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,119 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,155 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:55,155 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,155 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,156 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,156 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:55,156 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,157 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,157 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,159 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:55,159 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,159 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,160 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,160 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:55,160 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,160 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,161 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,161 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:55,162 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,162 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,162 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,163 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:55,164 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,164 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,166 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:55,169 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:55,170 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,170 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:55,171 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:55,171 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:55,171 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:55,172 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:55,172 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,766 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:59,766 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,766 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,766 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,766 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:59,766 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,766 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,767 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,767 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:59,767 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,767 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,767 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,767 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:59,767 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,767 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,768 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,768 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:59,768 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,768 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,768 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,769 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,769 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,769 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,769 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,770 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:59,770 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,770 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,771 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,771 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,771 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,771 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,772 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,776 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:59,776 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,777 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,778 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,778 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 8
+24 Mar 2025 16:22:59,779 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,779 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,779 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,793 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:59,793 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,793 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,794 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,794 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,794 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,794 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,795 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,795 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 9
+24 Mar 2025 16:22:59,795 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,795 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,796 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,796 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,796 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,796 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,796 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,801 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:59,801 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,801 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,801 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,801 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:59,802 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,802 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,802 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,802 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 2
+24 Mar 2025 16:22:59,802 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,803 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,803 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,803 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 6
+24 Mar 2025 16:22:59,803 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,803 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,803 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,810 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:59,811 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,811 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,811 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,811 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,811 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,811 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,812 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:22:59,812 TRACE org.example.repository.db.ChildDbRepository 59 FindById - Enter Looking for child with id: 5
+24 Mar 2025 16:22:59,812 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,812 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:22:59,813 TRACE org.example.repository.db.ChildDbRepository 75 FindById - Exit
+24 Mar 2025 16:22:59,813 TRACE org.example.repository.db.EventDbRepository 79 FindById - Enter Looking for event with id: 7
+24 Mar 2025 16:22:59,813 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:22:59,813 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:22:59,813 TRACE org.example.repository.db.EventDbRepository 95 FindById - Exit
+24 Mar 2025 16:23:06,269 TRACE org.example.repository.db.ChildDbRepository 81 FindAll - Enter Getting all of the children.
+24 Mar 2025 16:23:06,269 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:23:06,270 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@15527547)
+24 Mar 2025 16:23:06,270 TRACE org.example.repository.db.ChildDbRepository 99 FindAll - Exit
+24 Mar 2025 16:23:12,913 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+24 Mar 2025 16:23:12,913 TRACE org.example.utils.CommonUtils 45 GetConnection - Enter
+24 Mar 2025 16:23:12,913 TRACE org.example.utils.CommonUtils 53 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d9526d7)
+24 Mar 2025 16:23:12,914 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
