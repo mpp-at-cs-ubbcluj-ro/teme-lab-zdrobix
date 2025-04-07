@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,15 +15,17 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.domain.Child;
 import org.example.domain.Event;
+import org.example.domain.LoginInfo;
 import org.example.domain.Signup;
 import org.example.services.*;
 import org.example.utils.Crypter;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Controller implements IObserver{
+public class Controller implements IObserver {
     private static IService Service;
 
     private static String Key;
@@ -54,10 +57,9 @@ public class Controller implements IObserver{
 
     public void SetKey(String key) {
         Key = key;
-        System.out.println("\n\n\n\n\n*****************\n" + key + "\n\n\n\n\n *****");
     }
 
-    public static void StartApp () {
+    public void StartApp () {
         VBox vbox = CreateLoginVBox();
 
         StackPane stackPane = new StackPane();
@@ -72,7 +74,7 @@ public class Controller implements IObserver{
         loginStage.show();
     }
 
-    public static VBox CreateLoginVBox () {
+    public VBox CreateLoginVBox () {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
@@ -89,14 +91,9 @@ public class Controller implements IObserver{
         Button buttonLogin = new Button("Login");
         buttonLogin.setMaxWidth(200);
         buttonLogin.setOnAction(e -> {
-            String username = usernameField.getText();
-            String password = passwordField.getText();
+            String username = usernameField.getText().strip();
+            String password = passwordField.getText().strip();
 
-            var loginInfo = Service.GetByUsername(username);
-            if (loginInfo == null) {
-                showAlert("Invalid username.", Alert.AlertType.ERROR);
-                return;
-            }
             String encrypted;
             try {
                 encrypted = Crypter.encrypt(
@@ -107,9 +104,8 @@ public class Controller implements IObserver{
                 showAlert("Invalid file password.", Alert.AlertType.ERROR);
                 return;
             }
-            System.out.println(encrypted);
-            System.out.println(loginInfo.GetPassword());
-            if (password.equals(loginInfo.GetPassword())) {
+            LoginInfo login = new LoginInfo(username, encrypted);
+            if (Service.login(login, this)) {
                 showMenuPage();
                 Stage stage = (Stage) buttonLogin.getScene().getWindow();
                 stage.close();
@@ -122,7 +118,7 @@ public class Controller implements IObserver{
         return vbox;
     }
 
-    private static void showMenuPage() {
+    private void showMenuPage() {
         VBox menuVBox = createMenuVBox();
 
         StackPane stackPane = new StackPane();
@@ -137,7 +133,7 @@ public class Controller implements IObserver{
         menuStage.show();
     }
 
-    private static VBox createMenuVBox() {
+    private VBox createMenuVBox() {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
@@ -171,7 +167,7 @@ public class Controller implements IObserver{
         return vbox;
     }
 
-    private static VBox createChildMenu() {
+    private VBox createChildMenu() {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
@@ -301,7 +297,7 @@ public class Controller implements IObserver{
         return vbox;
     }
 
-    private static VBox createEventMenu() {
+    private VBox createEventMenu() {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
@@ -457,7 +453,7 @@ public class Controller implements IObserver{
         return vbox;
     }
 
-    private static VBox createSignupMenu() {
+    private VBox createSignupMenu() {
         VBox vbox = new VBox(10);
         vbox.setAlignment(Pos.CENTER);
 
@@ -486,10 +482,10 @@ public class Controller implements IObserver{
         signupTable.setMaxHeight(200);
 
         childColumn.setCellValueFactory(cellData -> {
-            return new SimpleStringProperty(Service.GetChildById(cellData.getValue().GetId().GetFirst()).GetName());
+            return new SimpleStringProperty(cellData.getValue().GetChild().GetName());
         });
         eventColumn.setCellValueFactory(cellData -> {
-            return new SimpleStringProperty(Service.GetEventById(cellData.getValue().GetId().GetSecond()).GetName());
+            return new SimpleStringProperty(cellData.getValue().GetEvent().GetName());
         });
 
         signupTable.getColumns().addAll(childColumn, eventColumn);
@@ -591,7 +587,7 @@ public class Controller implements IObserver{
         return vbox;
     }
 
-    private static void showAlert(String message, Alert.AlertType type) {
+    private void showAlert(String message, Alert.AlertType type) {
         Alert alert = new Alert(type);
         alert.setTitle("Alert");
         alert.setHeaderText(null);
@@ -601,16 +597,25 @@ public class Controller implements IObserver{
 
     @Override
     public void childAdded(Child child) {
-        modelChild.add(child);
+        Platform.runLater(() -> {
+            System.out.println("Updating model.");
+            modelChild.add(child);
+        });
     }
 
     @Override
     public void eventAdded(Event event) {
-        modelEvent.add(event);
+        Platform.runLater(() -> {
+            System.out.println("Updating model.");
+            modelEvent.add(event);
+        });
     }
 
     @Override
     public void signupAdded(Signup signup) {
-
+        Platform.runLater(() -> {
+            System.out.println("Updating model.");
+            modelSignup.add(signup);
+        });
     }
 }

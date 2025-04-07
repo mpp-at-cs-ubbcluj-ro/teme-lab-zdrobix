@@ -23,6 +23,11 @@ public class Start extends Application {
     private static Logger logger = LogManager.getLogger(Start.class);
 
     public void start(Stage primaryStage) throws Exception {
+        run_client();
+        run_client();
+    }
+
+    public void run_client() throws Exception {
         logger.debug("Starting client application");
         Properties clientProps = new Properties();
         try{

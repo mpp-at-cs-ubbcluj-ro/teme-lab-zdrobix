@@ -5,9 +5,7 @@ import org.example.domain.Event;
 import org.example.domain.LoginInfo;
 import org.example.domain.Signup;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Service implements IService {
@@ -53,7 +51,8 @@ public class Service implements IService {
 
     @Override
     public synchronized Child AddChild(String name, String cnp) {
-        return ServiceChild.AddChild(name, cnp);
+        var child = ServiceChild.AddChild(name, cnp);
+        return child;
     }
 
     @Override
@@ -127,8 +126,9 @@ public class Service implements IService {
     }
 
     @Override
-    public synchronized LoginInfo login(LoginInfo login, IObserver client) {
+    public synchronized boolean login(LoginInfo login, IObserver client) {
+        System.out.println("Someone logged in.");
         this.loggedUsers.put(login.GetId(), client);
-        return login;
+        return true;
     }
 }

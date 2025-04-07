@@ -1,5 +1,6 @@
 package org.example.protocol;
 
+import javafx.application.Platform;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.example.domain.Child;
@@ -12,6 +13,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -32,17 +35,18 @@ public class Proxy implements IService {
     private BlockingQueue<Response> qresponses;
     private volatile boolean finished;
 
-    public Proxy(String host, int port) {
+    public Proxy(String host, int port) throws Exception {
         this.host = host;
         this.port = port;
         qresponses = new LinkedBlockingQueue<Response>();
+        initializeConnection();
     }
 
 
     @Override
     public Iterable<Child> GetAllChildren() {
         try {
-            initializeConnection();
+            //initializeConnection();
             var request = new Request().setType(RequestType.GET_CHILDREN);
             sendRequest(request);
             var response = readResponse();
@@ -65,12 +69,8 @@ public class Proxy implements IService {
     @Override
     public Child AddChild(String name, String cnp) {
         try {
-            initializeConnection();
             var request = new Request().setType(RequestType.ADD_CHILD).setEntity(new Child(name, cnp));
             sendRequest(request);
-            var response = readResponse();
-            if (response.getType() == ResponseType.CHILD_ADDED)
-                return (Child)response.getEntity();
 
         } catch (Exception e) {
             logger.debug(e.getMessage());
@@ -91,7 +91,7 @@ public class Proxy implements IService {
     @Override
     public Iterable<Event> GetAllEvents() {
         try {
-            initializeConnection();
+            //initializeConnection();
             var request = new Request().setType(RequestType.GET_EVENTS);
             sendRequest(request);
             var response = readResponse();
@@ -114,12 +114,8 @@ public class Proxy implements IService {
     @Override
     public Event AddEvent(String name, int minAge, int maxAge) {
         try {
-            initializeConnection();
             var request = new Request().setType(RequestType.ADD_EVENT).setEntity(new Event(name, minAge, maxAge));
             sendRequest(request);
-            var response = readResponse();
-            if (response.getType() == ResponseType.EVENT_ADDED)
-                return (Event) response.getEntity();
         } catch (Exception e) {
             logger.debug(e.getMessage());
         }
@@ -139,7 +135,7 @@ public class Proxy implements IService {
     @Override
     public Iterable<Signup> GetAllSignups() {
         try {
-            initializeConnection();
+            //initializeConnection();
             var request = new Request().setType(RequestType.GET_SIGNUPS);
             sendRequest(request);
             var response = readResponse();
@@ -156,6 +152,12 @@ public class Proxy implements IService {
 
     @Override
     public Signup AddSignup(Child child, Event event) {
+        try {
+            var request = new Request().setType(RequestType.ADD_SIGNUP).setEntity(new Signup(child, event));
+            sendRequest(request);
+        } catch (Exception e) {
+            logger.debug(e.getMessage());
+        }
         return null;
     }
 
@@ -205,8 +207,21 @@ public class Proxy implements IService {
     }
 
     @Override
-    public LoginInfo login(LoginInfo login, IObserver client) {
-        return null;
+    public boolean login(LoginInfo login, IObserver client) {
+        try {
+            //initializeConnection();
+            var request = new Request().setType(RequestType.LOGIN).setEntity(login);
+            sendRequest(request);
+            var response = readResponse();
+            if (response.getType() == ResponseType.OK) {
+                logger.debug("*******************{}", client);
+                this.client = client;
+                return true;
+            } else closeConnection();
+        } catch (Exception e) {
+            logger.debug(e.getMessage());
+        }
+        return false;
     }
 
     private void closeConnection() {
@@ -264,6 +279,24 @@ public class Proxy implements IService {
     }
 
     private void handleUpdate(Response response){
+        switch (response.getType()) {
+            case CHILD_ADDED: {
+                Child child = (Child) response.getEntity();
+                logger.debug("Handling CHILD_ADDED update: {}", child.GetName());
+                if (client != null) {
+                    client.childAdded(child);
+                }
+                break;
+            }
+            case EVENT_ADDED: {
+                Event event = (Event) response.getEntity();
+                logger.debug("Handling EVENT_ADDED update: {}", event.GetName());
+                if (client != null) {
+                    client.eventAdded(event);
+                }
+                break;
+            }
+        }
 
     }
 
@@ -273,14 +306,27 @@ public class Proxy implements IService {
                 try {
                     Object response=input.readObject();
                     logger.debug("response received {}", response);
-                    try {
-                        qresponses.put((Response)response);
-                    } catch (InterruptedException e) {
-                        logger.error(e);
-                        logger.error(e.getStackTrace());
+                    synchronized (qresponses) {
+                        if (!(response instanceof Response))
+                            return;
+                        try {
+                            if (((Response) response).getType() == ResponseType.CHILD_ADDED ||
+                                    ((Response) response).getType() == ResponseType.EVENT_ADDED ||
+                                    ((Response) response).getType() == ResponseType.SIGNUP_ADDED
+                            ) {
+                                handleUpdate((Response) response);
+                            } else if (!qresponses.contains(response))
+                                qresponses.put((Response) response);
+                            else logger.debug("Duplicate response. {}", response);
+                        } catch (InterruptedException e) {
+                            logger.error(e);
+                            logger.error(e.getStackTrace());
+                            Thread.currentThread().interrupt();
+                        }
                     }
                 } catch (IOException|ClassNotFoundException e) {
                     logger.error("Reading error {}", e);
+                    finished = true;
                 }
             }
         }

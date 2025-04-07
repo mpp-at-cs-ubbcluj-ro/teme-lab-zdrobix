@@ -103,10 +103,10 @@ public class SignupDbRepository implements ISignupRepository {
                         "e.id AS event_id, e.name AS event_name, e.min_age, e.max_age " +
                         "FROM signups s " +
                         "JOIN children c ON s.id_child = c.id " +
-                        "JOIN events e ON s.id_event = e.id " +
-                        "WHERE c.id = ?")) {
+                        "JOIN events e ON s.id_event = e.id ")) {
             try (var resultSet = statement.executeQuery()) {
                 while (resultSet.next()) {
+                    logger.debug("Adding signup for " + resultSet.getString(2) + " " + resultSet.getString(5));
                     signups.add(
                             (Signup) new Signup(
                                     (Child) new Child(

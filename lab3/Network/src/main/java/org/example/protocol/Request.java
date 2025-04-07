@@ -1,6 +1,7 @@
 package org.example.protocol;
 
 import org.example.domain.Entity;
+import org.example.services.IObserver;
 
 import java.io.Serializable;
 import java.util.List;

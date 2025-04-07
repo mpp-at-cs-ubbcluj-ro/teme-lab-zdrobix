@@ -23,7 +23,8 @@ public abstract class AbstractServer {
                 logger.info("Waiting for clients ...");
                 Socket client=server.accept();
                 logger.info("Client connected ...");
-                new Thread(() -> processRequest(client)).start();
+                //new Thread(() -> processRequest(client)).start();
+                processRequest(client);
             }
         } catch (IOException e) {
             throw new ServerException("Starting server errror ",e);

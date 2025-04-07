@@ -78,7 +78,11 @@ public class Worker implements Runnable, IObserver {
             case LOGIN: {
                 var login = (LoginInfo)request.getEntity();
                 var actual = server.GetByUsername(login.GetUsername());
-                response = okResponse();
+                if (login.GetPassword().equals(actual.GetPassword())) {
+                    server.login(actual, this);
+                    response = okResponse();
+                }
+                else return new Response().setType(ResponseType.ERROR).setMessage("Invalid username or password");
                 break;
             }
             case ADD_CHILD: {
@@ -137,7 +141,13 @@ public class Worker implements Runnable, IObserver {
 
     @Override
     public void eventAdded(Event event) {
-
+        var response = new Response().setType(ResponseType.EVENT_ADDED).setEntity(event);
+        logger.debug("Event added {}", event.GetName());
+        try {
+            sendResponse(response);
+        } catch (IOException e) {
+            logger.error(e);
+        }
     }
 
     @Override
