@@ -6125,3 +6125,122 @@
 07 Apr 2025 11:24:20,262 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
 07 Apr 2025 11:24:20,264 TRACE org.example.repository.db.ChildDbRepository 98 FindAll - Exit
 07 Apr 2025 11:24:20,266 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILDREN_RECEIVED, Entity= null, Entities= [Andrei Mitica 5101010__, Florian Mateiiii 5110409__, Angel Razvan 5081111__, Sabau Andrea 6050829__, Mihai Grozavul 5090909__, Zdroba Alex 5041110__, Muresan Ioana 6090411__, Elena Duma 6101110__, Pop Stelian 5081208__, Marius 6666666, Pop 1231231, a 1231111], Message= null]
+07 Apr 2025 11:24:21,289 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_EVENTS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:24:21,290 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+07 Apr 2025 11:24:21,290 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:24:21,290 TRACE org.example.repository.utils.CommonUtils 24 GetNewConnection - Enter
+07 Apr 2025 11:24:21,290 INFO  org.example.repository.utils.CommonUtils 28 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+07 Apr 2025 11:24:21,291 INFO  org.example.repository.utils.CommonUtils 29 GetNewConnection - user: null
+07 Apr 2025 11:24:21,291 INFO  org.example.repository.utils.CommonUtils 30 GetNewConnection - pass: null
+07 Apr 2025 11:24:21,292 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d6627fd)
+07 Apr 2025 11:24:21,293 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+07 Apr 2025 11:24:21,300 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= EVENTS_RECEIVED, Entity= null, Entities= [Basket 10 18, Fotbal 10 18, Volley 10 18, Cules bureti 0 14, Slujba 4 16, Cules cirese 0 17, Dans modern 5 10, Canto 0 18, aaa 1 2, aaa 1 2, aaaa 1 2, 123 1 5], Message= null]
+07 Apr 2025 11:24:22,312 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_SIGNUPS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:24:22,314 TRACE org.example.repository.db.SignupDbRepository 98 FindAll - Enter Getting all of the signups.
+07 Apr 2025 11:24:22,315 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:24:22,316 TRACE org.example.repository.utils.CommonUtils 24 GetNewConnection - Enter
+07 Apr 2025 11:24:22,317 INFO  org.example.repository.utils.CommonUtils 28 GetNewConnection - trying to connect to database ... jdbc:sqlite:children_events.db
+07 Apr 2025 11:24:22,318 INFO  org.example.repository.utils.CommonUtils 29 GetNewConnection - user: null
+07 Apr 2025 11:24:22,318 INFO  org.example.repository.utils.CommonUtils 30 GetNewConnection - pass: null
+07 Apr 2025 11:24:22,321 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@47acceff)
+07 Apr 2025 11:24:22,322 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Basket
+07 Apr 2025 11:24:22,324 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Cules bureti
+07 Apr 2025 11:24:22,325 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Slujba
+07 Apr 2025 11:24:22,325 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Slujba
+07 Apr 2025 11:24:22,325 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Cules bureti
+07 Apr 2025 11:24:22,326 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Fotbal
+07 Apr 2025 11:24:22,326 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Muresan Ioana Cules cirese
+07 Apr 2025 11:24:22,327 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Canto
+07 Apr 2025 11:24:22,328 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Canto
+07 Apr 2025 11:24:22,328 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Dans modern
+07 Apr 2025 11:24:22,329 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Florian Mateiiii Cules cirese
+07 Apr 2025 11:24:22,329 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Dans modern
+07 Apr 2025 11:24:22,329 TRACE org.example.repository.db.SignupDbRepository 129 FindAll - Exit
+07 Apr 2025 11:24:22,331 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= SIGNUPS_RECEIVED, Entity= null, Entities= [Andrei Mitica Basket, Sabau Andrea Cules bureti, Sabau Andrea Slujba, Zdroba Alex Slujba, Zdroba Alex Cules bureti, Mihai Grozavul Fotbal, Muresan Ioana Cules cirese, Andrei Mitica Canto, Pop Stelian Canto, Pop Stelian Dans modern, Florian Mateiiii Cules cirese, Mihai Grozavul Dans modern], Message= null]
+07 Apr 2025 11:25:11,261 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= LOGIN, Entity= LoginInfo [Username=mihai, Password=maCT420BiyRmW9+NpriL+g==], Entities= null, Message= null]
+07 Apr 2025 11:25:11,262 TRACE org.example.repository.db.LoginDbRepository 52 GetByUsername - Enter Getting login info for username mihai
+07 Apr 2025 11:25:11,262 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:11,263 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@47a67d47)
+07 Apr 2025 11:25:11,263 TRACE org.example.repository.db.LoginDbRepository 68 GetByUsername - Exit
+07 Apr 2025 11:25:11,264 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= OK, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:12,274 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_CHILDREN, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:12,275 TRACE org.example.repository.db.ChildDbRepository 80 FindAll - Enter Getting all of the children.
+07 Apr 2025 11:25:12,277 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:12,278 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:25:12,280 TRACE org.example.repository.db.ChildDbRepository 98 FindAll - Exit
+07 Apr 2025 11:25:12,281 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILDREN_RECEIVED, Entity= null, Entities= [Andrei Mitica 5101010__, Florian Mateiiii 5110409__, Angel Razvan 5081111__, Sabau Andrea 6050829__, Mihai Grozavul 5090909__, Zdroba Alex 5041110__, Muresan Ioana 6090411__, Elena Duma 6101110__, Pop Stelian 5081208__, Marius 6666666, Pop 1231231, a 1231111], Message= null]
+07 Apr 2025 11:25:13,293 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_EVENTS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:13,295 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+07 Apr 2025 11:25:13,296 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:13,297 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d6627fd)
+07 Apr 2025 11:25:13,300 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+07 Apr 2025 11:25:13,302 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= EVENTS_RECEIVED, Entity= null, Entities= [Basket 10 18, Fotbal 10 18, Volley 10 18, Cules bureti 0 14, Slujba 4 16, Cules cirese 0 17, Dans modern 5 10, Canto 0 18, aaa 1 2, aaa 1 2, aaaa 1 2, 123 1 5], Message= null]
+07 Apr 2025 11:25:14,326 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_SIGNUPS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:14,327 TRACE org.example.repository.db.SignupDbRepository 98 FindAll - Enter Getting all of the signups.
+07 Apr 2025 11:25:14,328 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:14,329 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@47acceff)
+07 Apr 2025 11:25:14,331 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Basket
+07 Apr 2025 11:25:14,332 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Cules bureti
+07 Apr 2025 11:25:14,333 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Slujba
+07 Apr 2025 11:25:14,334 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Slujba
+07 Apr 2025 11:25:14,335 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Cules bureti
+07 Apr 2025 11:25:14,336 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Fotbal
+07 Apr 2025 11:25:14,337 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Muresan Ioana Cules cirese
+07 Apr 2025 11:25:14,338 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Canto
+07 Apr 2025 11:25:14,339 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Canto
+07 Apr 2025 11:25:14,339 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Dans modern
+07 Apr 2025 11:25:14,342 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Florian Mateiiii Cules cirese
+07 Apr 2025 11:25:14,344 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Dans modern
+07 Apr 2025 11:25:14,345 TRACE org.example.repository.db.SignupDbRepository 129 FindAll - Exit
+07 Apr 2025 11:25:14,346 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= SIGNUPS_RECEIVED, Entity= null, Entities= [Andrei Mitica Basket, Sabau Andrea Cules bureti, Sabau Andrea Slujba, Zdroba Alex Slujba, Zdroba Alex Cules bureti, Mihai Grozavul Fotbal, Muresan Ioana Cules cirese, Andrei Mitica Canto, Pop Stelian Canto, Pop Stelian Dans modern, Florian Mateiiii Cules cirese, Mihai Grozavul Dans modern], Message= null]
+07 Apr 2025 11:25:52,147 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= ADD_CHILD, Entity= aaa 1231231, Entities= null, Message= null]
+07 Apr 2025 11:25:52,149 TRACE org.example.repository.db.ChildDbRepository 104 Save - Enter Saving child aaa 1231231
+07 Apr 2025 11:25:52,150 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:52,151 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:25:52,192 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILD_ADDED, Entity= aaa 1231231, Entities= null, Message= null]
+07 Apr 2025 11:25:55,469 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_CHILDREN, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:55,472 TRACE org.example.repository.db.ChildDbRepository 80 FindAll - Enter Getting all of the children.
+07 Apr 2025 11:25:55,474 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:55,475 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:25:55,477 TRACE org.example.repository.db.ChildDbRepository 98 FindAll - Exit
+07 Apr 2025 11:25:55,479 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILDREN_RECEIVED, Entity= null, Entities= [Andrei Mitica 5101010__, Florian Mateiiii 5110409__, Angel Razvan 5081111__, Sabau Andrea 6050829__, Mihai Grozavul 5090909__, Zdroba Alex 5041110__, Muresan Ioana 6090411__, Elena Duma 6101110__, Pop Stelian 5081208__, Marius 6666666, Pop 1231231, a 1231111, aaa 1231231], Message= null]
+07 Apr 2025 11:25:56,488 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_EVENTS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:56,489 TRACE org.example.repository.db.EventDbRepository 101 FindAll - Enter Getting all of the events.
+07 Apr 2025 11:25:56,491 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:56,491 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@1d6627fd)
+07 Apr 2025 11:25:56,494 TRACE org.example.repository.db.EventDbRepository 120 FindAll - Exit
+07 Apr 2025 11:25:56,496 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= EVENTS_RECEIVED, Entity= null, Entities= [Basket 10 18, Fotbal 10 18, Volley 10 18, Cules bureti 0 14, Slujba 4 16, Cules cirese 0 17, Dans modern 5 10, Canto 0 18, aaa 1 2, aaa 1 2, aaaa 1 2, 123 1 5], Message= null]
+07 Apr 2025 11:25:57,519 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= GET_SIGNUPS, Entity= null, Entities= null, Message= null]
+07 Apr 2025 11:25:57,520 TRACE org.example.repository.db.SignupDbRepository 98 FindAll - Enter Getting all of the signups.
+07 Apr 2025 11:25:57,521 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:25:57,522 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@47acceff)
+07 Apr 2025 11:25:57,524 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Basket
+07 Apr 2025 11:25:57,528 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Cules bureti
+07 Apr 2025 11:25:57,529 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Sabau Andrea Slujba
+07 Apr 2025 11:25:57,529 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Slujba
+07 Apr 2025 11:25:57,530 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Zdroba Alex Cules bureti
+07 Apr 2025 11:25:57,531 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Fotbal
+07 Apr 2025 11:25:57,533 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Muresan Ioana Cules cirese
+07 Apr 2025 11:25:57,534 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Andrei Mitica Canto
+07 Apr 2025 11:25:57,536 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Canto
+07 Apr 2025 11:25:57,537 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Pop Stelian Dans modern
+07 Apr 2025 11:25:57,539 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Florian Mateiiii Cules cirese
+07 Apr 2025 11:25:57,540 DEBUG org.example.repository.db.SignupDbRepository 109 FindAll - Adding signup for Mihai Grozavul Dans modern
+07 Apr 2025 11:25:57,541 TRACE org.example.repository.db.SignupDbRepository 129 FindAll - Exit
+07 Apr 2025 11:25:57,543 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= SIGNUPS_RECEIVED, Entity= null, Entities= [Andrei Mitica Basket, Sabau Andrea Cules bureti, Sabau Andrea Slujba, Zdroba Alex Slujba, Zdroba Alex Cules bureti, Mihai Grozavul Fotbal, Muresan Ioana Cules cirese, Andrei Mitica Canto, Pop Stelian Canto, Pop Stelian Dans modern, Florian Mateiiii Cules cirese, Mihai Grozavul Dans modern], Message= null]
+07 Apr 2025 11:26:02,587 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= ADD_CHILD, Entity= 123 1231231, Entities= null, Message= null]
+07 Apr 2025 11:26:02,587 TRACE org.example.repository.db.ChildDbRepository 104 Save - Enter Saving child 123 1231231
+07 Apr 2025 11:26:02,587 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:26:02,587 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:26:02,605 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILD_ADDED, Entity= 123 1231231, Entities= null, Message= null]
+07 Apr 2025 11:26:09,889 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= ADD_CHILD, Entity= 123 1231231, Entities= null, Message= null]
+07 Apr 2025 11:26:09,889 TRACE org.example.repository.db.ChildDbRepository 104 Save - Enter Saving child 123 1231231
+07 Apr 2025 11:26:09,890 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:26:09,892 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:26:09,922 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILD_ADDED, Entity= 123 1231231, Entities= null, Message= null]
+07 Apr 2025 11:26:16,826 DEBUG org.example.protocol.Worker 47 run - Received request from client: Request [Type= ADD_CHILD, Entity= 1111 1231232123, Entities= null, Message= null]
+07 Apr 2025 11:26:16,828 TRACE org.example.repository.db.ChildDbRepository 104 Save - Enter Saving child 1111 1231232123
+07 Apr 2025 11:26:16,829 TRACE org.example.repository.utils.CommonUtils 44 GetConnection - Enter
+07 Apr 2025 11:26:16,831 TRACE org.example.repository.utils.CommonUtils 52 GetConnection - Exit with(org.sqlite.jdbc4.JDBC4Connection@6b4feea3)
+07 Apr 2025 11:26:16,862 DEBUG org.example.protocol.Worker 124 sendResponse - sending response Response [Type= CHILD_ADDED, Entity= 1111 1231232123, Entities= null, Message= null]
+07 Apr 2025 11:26:32,246 DEBUG org.example.protocol.Worker 47 run - Received request from client: [!!!org.example.protocol.Request@37867ac7=>java.lang.NullPointerException:Cannot invoke "org.example.domain.Child.GetName()" because "this.Child" is null!!!]
