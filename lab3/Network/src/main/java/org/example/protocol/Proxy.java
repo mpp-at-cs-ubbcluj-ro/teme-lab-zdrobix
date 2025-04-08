@@ -15,6 +15,7 @@ import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -224,6 +225,23 @@ public class Proxy implements IService {
         return false;
     }
 
+    @Override
+    public boolean logout(LoginInfo login, IObserver client) {
+        try {
+            //initializeConnection();
+            var request = new Request().setType(RequestType.LOGOUT).setEntity(login);
+            sendRequest(request);
+            var response = readResponse();
+            if (response.getType() == ResponseType.OK) {
+                this.client = null;
+                return true;
+            } else closeConnection();
+        } catch (Exception e) {
+            logger.debug(e.getMessage());
+        }
+        return false;
+    }
+
     private void closeConnection() {
         logger.debug("Closing connection");
         finished=true;
@@ -295,6 +313,13 @@ public class Proxy implements IService {
                     client.eventAdded(event);
                 }
                 break;
+            }
+            case SIGNUP_ADDED: {
+                Signup signup = (Signup) response.getEntity();
+                logger.debug("Handling SIGNUP_ADDED update: {}", signup.GetChild().GetName() + " " + signup.GetEvent().GetName());
+                if (client != null) {
+                    client.signupAdded(signup);
+                }
             }
         }
 

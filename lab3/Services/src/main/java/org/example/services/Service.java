@@ -52,6 +52,7 @@ public class Service implements IService {
     @Override
     public synchronized Child AddChild(String name, String cnp) {
         var child = ServiceChild.AddChild(name, cnp);
+        this.notifyChildAdded(child);
         return child;
     }
 
@@ -77,7 +78,9 @@ public class Service implements IService {
 
     @Override
     public synchronized Event AddEvent(String name, int minAge, int maxAge) {
-        return ServiceEvent.Add(name, minAge, maxAge);
+        var event =  ServiceEvent.Add(name, minAge, maxAge);
+        this.notifyEventAdded(event);
+        return event;
     }
 
     @Override
@@ -97,7 +100,9 @@ public class Service implements IService {
 
     @Override
     public synchronized Signup AddSignup(Child child, Event event) {
-        return ServiceSignup.AddSignup(child, event);
+        var signup =  ServiceSignup.AddSignup(child, event);
+        notifySignupAdded(signup);
+        return signup;
     }
 
     @Override
@@ -130,5 +135,30 @@ public class Service implements IService {
         System.out.println("Someone logged in.");
         this.loggedUsers.put(login.GetId(), client);
         return true;
+    }
+
+    @Override
+    public synchronized boolean logout(LoginInfo login, IObserver client) {
+        System.out.println("Someone logged out.");
+        this.loggedUsers.remove(login.GetId());
+        return true;
+    }
+
+    public void notifyChildAdded(Child child) {
+        for (var client : loggedUsers.values()) {
+            client.childAdded(child);
+        }
+    }
+
+    public void notifyEventAdded(Event event) {
+        for (var client : loggedUsers.values()) {
+            client.eventAdded(event);
+        }
+    }
+
+    public void notifySignupAdded(Signup signup) {
+        for (var client : loggedUsers.values()) {
+            client.signupAdded(signup);
+        }
     }
 }

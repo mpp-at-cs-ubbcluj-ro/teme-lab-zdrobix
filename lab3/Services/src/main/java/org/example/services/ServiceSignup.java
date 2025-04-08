@@ -20,7 +20,8 @@ public class ServiceSignup implements IServiceSignup {
     }
 
     public Signup AddSignup (Child child, Event event) {
-        return this.Repo.Save(new Signup(child, event));
+        this.Repo.Save(new Signup(child, event));
+        return this.Repo.FindById(new Tuple<>(child.GetId(), event.GetId()));
     }
 
     public Signup GetById (int childId, int eventId) {

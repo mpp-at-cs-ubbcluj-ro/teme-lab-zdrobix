@@ -30,4 +30,5 @@ public interface IService extends Serializable {
     IServiceSignup getServiceSignup();
     IServiceLogin getServiceLogin();
     boolean login(LoginInfo login, IObserver client);
+    boolean logout(LoginInfo login, IObserver client);
 }

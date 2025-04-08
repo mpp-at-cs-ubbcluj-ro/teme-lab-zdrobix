@@ -55,7 +55,7 @@ public class Worker implements Runnable, IObserver {
                 e.printStackTrace();
             }
             try {
-                Thread.sleep(1000);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 logger.error(e);
                 logger.error(e.getStackTrace());
@@ -152,6 +152,12 @@ public class Worker implements Runnable, IObserver {
 
     @Override
     public void signupAdded(Signup signup) {
-
+        var response = new Response().setType(ResponseType.SIGNUP_ADDED).setEntity(signup);
+        logger.debug("Signup added {}", signup.GetChild().GetName() + " " + signup.GetEvent().GetName());
+        try {
+            sendResponse(response);
+        } catch (IOException e) {
+            logger.error(e);
+        }
     }
 }

@@ -75,14 +75,28 @@ public class SignupDbRepository implements ISignupRepository {
         logger.traceEntry("Looking for signup with id: {} {}", integerIntegerTuple.GetFirst(), integerIntegerTuple.GetSecond());
         Connection connection = this.Utils.GetConnection();
         Signup signup = null;
-        try (var statement = connection.prepareStatement("select * from signups where id_child = ? and id_event = ?"))
+        try (var statement = connection.prepareStatement(
+                "SELECT c.id AS child_id, c.name AS child_name, c.cnp AS child_cnp, " +
+                "e.id AS event_id, e.name AS event_name, e.min_age, e.max_age " +
+                "FROM signups s " +
+                "JOIN children c ON s.id_child = c.id " +
+                "JOIN events e ON s.id_event = e.id "))
         {
             statement.setInt(1, integerIntegerTuple.GetFirst());
             statement.setInt(2, integerIntegerTuple.GetSecond());
             try (var resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    signup = (Signup) new Signup()
-                            .SetId(new Tuple<>(resultSet.getInt(1), resultSet.getInt(2)));
+                   signup = (Signup) new Signup(
+                           (Child) new Child(
+                                   resultSet.getString(2),
+                                   resultSet.getString(3)
+                           ).SetId(resultSet.getInt(1)),
+                           (Event) new Event(
+                                   resultSet.getString(5),
+                                   resultSet.getInt(6),
+                                   resultSet.getInt(7)
+                           ).SetId(resultSet.getInt(4))
+                   ).SetId(new Tuple(resultSet.getInt(1), resultSet.getInt(4)));
                 }
             }
         } catch (SQLException e) {

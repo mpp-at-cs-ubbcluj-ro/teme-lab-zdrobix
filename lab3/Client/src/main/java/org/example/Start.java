@@ -24,7 +24,6 @@ public class Start extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         run_client();
-        run_client();
     }
 
     public void run_client() throws Exception {
