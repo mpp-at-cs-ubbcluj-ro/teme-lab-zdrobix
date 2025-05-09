@@ -47,7 +47,8 @@ public class Start extends Application {
         }
         logger.info("Connecting to server {} on port {}", serverIP, serverPort);
 
-        IService server = new Proxy(serverIP, serverPort);
+//        IService server = new Proxy(serverIP, serverPort);
+        IService server = new GrpcClient(serverIP, serverPort);
 
         URL fxmlUrl = getClass().getResource("/views/main_view.fxml");
         FXMLLoader loader = new FXMLLoader(fxmlUrl);

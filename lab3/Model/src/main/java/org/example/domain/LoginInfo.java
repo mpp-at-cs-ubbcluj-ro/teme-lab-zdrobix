@@ -20,6 +20,6 @@ public class LoginInfo extends Entity<Integer>{
 
     @Override
     public String toString() {
-        return "LoginInfo [Username=" + Username + ", Password=" + Password + "]";
+        return "LoginInfo [Id= " + this.GetId() + " Username=" + Username + ", Password=" + Password + "]";
     }
 }

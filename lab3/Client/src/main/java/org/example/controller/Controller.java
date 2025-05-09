@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Controller implements IObserver {
+    private LoginInfo CurrentLogin;
     private static IService Service;
 
     private static String Key;
@@ -44,6 +45,9 @@ public class Controller implements IObserver {
     private static ObservableList<Child> modelChild;
     private static ObservableList<Event> modelEvent;
     private static ObservableList<Signup> modelSignup;
+
+    private int LastNotifiedChildId = -1;
+    private int LastNotifiedEventId = -1;
 
     public Controller() {};
 
@@ -88,6 +92,10 @@ public class Controller implements IObserver {
         passwordField.setPromptText("Password");
         passwordField.setMaxWidth(200);
 
+        //REMOVE
+        usernameField.setText("alex");
+        passwordField.setText("parola");
+
         Button buttonLogin = new Button("Login");
         buttonLogin.setMaxWidth(200);
         buttonLogin.setOnAction(e -> {
@@ -104,8 +112,12 @@ public class Controller implements IObserver {
                 showAlert("Invalid file password.", Alert.AlertType.ERROR);
                 return;
             }
-            LoginInfo login = new LoginInfo(username, encrypted);
-            if (Service.login(login, this)) {
+            LoginInfo login = Service.GetByUsername(username);
+            System.out.println(login);
+            if (login.GetPassword().equals(encrypted)) {
+                if (!Service.login(login, this))
+                    return;
+                this.CurrentLogin = login;
                 showMenuPage();
                 Stage stage = (Stage) buttonLogin.getScene().getWindow();
                 stage.close();
@@ -126,6 +138,10 @@ public class Controller implements IObserver {
         stackPane.getChildren().add(menuVBox);
 
         Stage menuStage = new Stage();
+        menuStage.setOnCloseRequest(event -> {
+            if (this.CurrentLogin != null)
+                Service.logout(this.CurrentLogin, this);
+        });
         Scene menuScene = new Scene(stackPane, 800, 600);
         menuScene.getStylesheets().add(Controller.class.getResource("/css/styles.css").toExternalForm());
         menuStage.setTitle("Menu Page");
@@ -151,6 +167,7 @@ public class Controller implements IObserver {
         logout.setPrefWidth(200);
         logout.setOnAction(e -> {
             try {
+                Service.logout(this.CurrentLogin, this);
                 StartApp();
             } catch (Exception ex) {
                 throw new RuntimeException(ex);
@@ -597,6 +614,9 @@ public class Controller implements IObserver {
 
     @Override
     public void childAdded(Child child) {
+        if (this.LastNotifiedChildId == child.GetId())
+            return;
+        this.LastNotifiedChildId = child.GetId();
         Platform.runLater(() -> {
             System.out.println("Updating model.");
             modelChild.add(child);
@@ -605,6 +625,9 @@ public class Controller implements IObserver {
 
     @Override
     public void eventAdded(Event event) {
+        if (this.LastNotifiedEventId == event.GetId())
+            return;
+        this.LastNotifiedEventId = event.GetId();
         Platform.runLater(() -> {
             System.out.println("Updating model.");
             modelEvent.add(event);
